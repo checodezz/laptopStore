@@ -64,7 +64,7 @@ function createListOfLaptops(data) {
         const detailsBtn = document.createElement('a');
         detailsBtn.className = 'btn btn-primary';
         detailsBtn.textContent = 'Details'
-        detailsBtn.href = `laptopDetails.html?=${data[i].id}`;
+        detailsBtn.href = `laptopDetails.html?id=${data[i].id}`;
 
         card.appendChild(cardHeader);
         card.appendChild(cardBody);
@@ -92,9 +92,9 @@ function applyFilter() {
         showlistOfLaptops.innerHTML = '';
         createListOfLaptops(laptops)
     } else {
+        showlistOfLaptops.textContent = ''
         for (let i = 0; i < laptops.length; i++) {
             if (laptops[i].brand === selectedBrand) {
-                showlistOfLaptops.textContent = ''
                 filteredBrand.push(laptops[i]);
             }
         }
@@ -136,3 +136,4 @@ function priceFilter() {
 
     }
 }
+
