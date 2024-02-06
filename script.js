@@ -100,3 +100,38 @@ function applyFilter() {
     }
     createListOfLaptops(filteredBrand);
 }
+
+//priceFilter
+
+const applyPriceFilter = document.querySelector('#applyPriceFilter');
+
+applyPriceFilter.addEventListener('change', priceFilter)
+
+function priceFilter() {
+
+    const selectedPriceFilter = parseInt(applyPriceFilter.value);
+    const filteredPrice = [];
+
+    showlistOfLaptops.innerHTML = ''
+
+    if (isNaN(selectedPriceFilter) || selectedPriceFilter === 'All') {
+        createListOfLaptops(laptops)
+    } else {
+
+
+        for (let i = 0; i < laptops.length; i++) {
+            if (selectedPriceFilter === 500) {
+                if (laptops[i].price <= 500) {
+                    filteredPrice.push(laptops[i]);
+                }
+            } else if (selectedPriceFilter === 1000) {
+
+                if (laptops[i].price > 500) {
+                    filteredPrice.push(laptops[i])
+                }
+            }
+        }
+        createListOfLaptops(filteredPrice)
+
+    }
+}

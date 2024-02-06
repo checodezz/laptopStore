@@ -38,15 +38,28 @@
     <main class="container">
         <h1>List of Laptops</h1>
 
-        <div class="col-md-6">
-            <label for="applyBrandFilter" class="form-label">Filter by Brand:</label>
-            <select id="applyBrandFilter" class="form-control">
-                <option value="All">All Brands</option>
-                <option value="HP">HP</option>
-                <option value="Dell">Dell</option>
-                <option value="Lenovo">Lenovo</option>
-            </select>
+        <div class="row">
+
+            <div class="col-md-6">
+                <label for="applyBrandFilter" class="form-label">Filter by Brand:</label>
+                <select id="applyBrandFilter" class="form-control">
+                    <option value="All">All Brands</option>
+                    <option value="HP">HP</option>
+                    <option value="Dell">Dell</option>
+                    <option value="Lenovo">Lenovo</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Filter by Price:</label>
+                <select id="applyPriceFilter" class="form-control">
+                    <option value="All">All Priices</option>
+                    <option value="500">$500 and Under</option>
+                    <option value="1000">$500 - $1000</option>
+                </select>
+            </div>
         </div>
+
 
         <div class="col" id="showlistOfLaptops">
 
