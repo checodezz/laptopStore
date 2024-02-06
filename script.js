@@ -89,6 +89,7 @@ function applyFilter() {
     const filteredBrand = [];
 
     if (selectedBrand === 'All') {
+        showlistOfLaptops.innerHTML = '';
         createListOfLaptops(laptops)
     } else {
         for (let i = 0; i < laptops.length; i++) {
